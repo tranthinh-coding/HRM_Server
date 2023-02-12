@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "scripts": {
+    "cz": "czg",
+    "prettier": "prettier --write --cache .",
+    "format": "prettier --write --cache .",
+    "lint:commit": "commitlint --from $(git merge-base origin/dev HEAD) --to HEAD > ./commit-lint.txt",
+    "stub": "pnpm run -r --parallel stub",
+    "prepare": "husky install",
+    "postinstall": "pnpm stub"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@prettier/plugin-php": "^0.19.3",
+    "axios": "^1.1.2",
+    "cz-git": "^1.4.1",
+    "czg": "^1.4.1",
+    "husky": "^8.0.3",
+    "laravel-vite-plugin": "^0.7.2",
+    "lodash": "^4.17.19",
+    "postcss": "^8.1.14",
+    "prettier": "^2.8.4",
+    "vite": "^4.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-git"
+    }
+  }
+}
