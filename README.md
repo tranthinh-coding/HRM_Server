@@ -21,7 +21,12 @@ Generate Key
 php artisan key:generate
 ```
 
-Generate passport secret
+Migrate
+```shell
+php artisan migrate
+```
+
+Passport Install
 ```shell
 php artisan passport:install
 ```
@@ -33,4 +38,3 @@ php artisan serve
 # of php artisan serve --host=localhost --port=80
 # to running on http://localhost
 ```
-
